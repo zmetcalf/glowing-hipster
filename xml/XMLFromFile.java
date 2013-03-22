@@ -1,3 +1,5 @@
+//http://stackoverflow.com/questions/3058434/xml-parse-file-from-http
+
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
@@ -10,8 +12,6 @@ import org.w3c.dom.NodeList;
 
 public class XMLFromFile {
 
-	private String xmlElement;
-
 	public XMLFromFile(String xmlFile) {
 		try {
 			loadXMLFileURL(xmlFile);
@@ -19,10 +19,6 @@ public class XMLFromFile {
 		catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
-
-	public String getXmlElement() {
-		return xmlElement;
 	}
 	
 	private void loadXMLFileURL(String urlAddress) throws Exception {
